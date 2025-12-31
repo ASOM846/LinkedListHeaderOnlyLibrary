@@ -109,7 +109,7 @@ public:
             return;
         }
 
-        if (index >= sizeOfList) // treat as append when index is at or past the end
+        if (index >= sizeOfList)
         {
             Node *node = new Node{nullptr, value};
             if (Last)
@@ -125,7 +125,6 @@ public:
         }
 
         Node *prior = Head;
-        // move to node at position index-1
         for (unsigned int i = 0; i + 1 < index; ++i)
         {
             if (prior == nullptr)
